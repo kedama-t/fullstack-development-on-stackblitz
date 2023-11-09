@@ -1,0 +1,42 @@
+{
+  "name": "nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "stackblitz": {
+    "startCommand": "npm install && npm run db && npm run dev"
+  },
+  "scripts": {
+    "db": "run-s db:*",
+    "db:generate": "drizzle-kit generate:sqlite",
+    "db:migrate": "ts-node --esm -O '{\"module\": \"commonjs\"}' ./src/db/migrate.ts",
+    "db:seed": "ts-node --esm -O '{\"module\": \"commonjs\"}' ./src/db/seed.ts",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix"
+  },
+  "dependencies": {
+    "@types/node": "20.6.2",
+    "@types/react": "18.2.22",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.15",
+    "drizzle-orm": "^0.28.6",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.5.1",
+    "next": "13.5.1",
+    "postcss": "8.4.30",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sqlite3": "^5.1.6",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@types/sqlite3": "^3.1.11",
+    "drizzle-kit": "^0.19.13",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.9.1"
+  }
+}
