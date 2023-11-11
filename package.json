@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "stackblitz": {
-    "startCommand": "npm install && npm run db && npm run dev"
+    "startCommand": "npm run db && npm run dev"
   },
   "scripts": {
     "db": "run-s db:*",
